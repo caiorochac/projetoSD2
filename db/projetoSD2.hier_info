@@ -1,0 +1,45 @@
+|decode
+display1[6] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[5] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[4] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[3] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[2] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[1] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display1[0] <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display2[6] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[5] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[4] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[3] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[2] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[1] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[0] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => Ram0.RADDR
+X[0] => Ram1.RADDR
+X[1] => Ram0.RADDR1
+X[1] => Ram1.RADDR1
+X[2] => Ram0.RADDR2
+X[2] => Ram1.RADDR2
+X[3] => Ram0.RADDR3
+X[3] => Ram1.RADDR3
+X[4] => Ram0.RADDR4
+X[4] => Ram1.RADDR4
+X[5] => Ram0.RADDR5
+X[5] => Ram1.RADDR5
+X[6] => Ram0.RADDR6
+X[6] => Ram1.RADDR6
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display1.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+EN => display2.OUTPUTSELECT
+
+
