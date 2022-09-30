@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="projetoSD2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|calculadora:comb_3|lpm_mult:Mult0" CBX_FILE_NAME="mult_6at.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

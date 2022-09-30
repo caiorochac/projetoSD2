@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY decode
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:43:07  SEPTEMBER 27, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -48,6 +48,7 @@ set_global_assignment -name LL_ROOT_REGION ON -entity projetoSD2 -section_id "Ro
 set_global_assignment -name LL_MEMBER_STATE LOCKED -entity projetoSD2 -section_id "Root Region"
 set_global_assignment -name VERILOG_FILE decode.v
 set_global_assignment -name VERILOG_FILE decodeSinal.v
+set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
