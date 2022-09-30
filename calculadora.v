@@ -54,14 +54,22 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 			soma: begin
 				Y = A + B;
 				sinal = 1'd0;
+				EN = 1'd1;
 			end
 			sub: begin
-				Y = A - B;
-				if(B > A) sinal = 1'd1;
-				else sinal = 1'd0;
+				EN = 1'd1;
+				if(B > A) begin
+					sinal = 1'd1;
+			        Y = B - A;
+			    end
+				else begin
+					sinal = 1'd0;
+					Y = A - B;
+				end
 			end
 			multi: begin
 				Y = A * B;
+				EN = 1'd1;
 				sinal = 1'd0;
 			end
 		endcase

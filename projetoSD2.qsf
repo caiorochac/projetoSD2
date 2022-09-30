@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:43:07  SEPTEMBER 27, 2022"
@@ -49,6 +49,82 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -entity projetoSD2 -section_i
 set_global_assignment -name VERILOG_FILE decode.v
 set_global_assignment -name VERILOG_FILE decodeSinal.v
 set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name MISC_FILE "D:/Users/crc/Desktop/projetoSD2/projetoSD2.dpf"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_Y23 -to A[6]
+set_location_assignment PIN_Y24 -to A[5]
+set_location_assignment PIN_AA22 -to A[4]
+set_location_assignment PIN_AA23 -to A[3]
+set_location_assignment PIN_AA24 -to A[2]
+set_location_assignment PIN_AB23 -to A[1]
+set_location_assignment PIN_AB24 -to A[0]
+set_location_assignment PIN_AC24 -to B[6]
+set_location_assignment PIN_AB25 -to B[5]
+set_location_assignment PIN_AC25 -to B[4]
+set_location_assignment PIN_AB26 -to B[3]
+set_location_assignment PIN_AD26 -to B[2]
+set_location_assignment PIN_AC26 -to B[1]
+set_location_assignment PIN_AB27 -to B[0]
+set_location_assignment PIN_R24 -to b0
+set_location_assignment PIN_N21 -to b1
+set_location_assignment PIN_M21 -to b2
+set_location_assignment PIN_M23 -to b3
+set_location_assignment PIN_G18 -to dis1[0]
+set_location_assignment PIN_F22 -to dis1[1]
+set_location_assignment PIN_E17 -to dis1[2]
+set_location_assignment PIN_L26 -to dis1[3]
+set_location_assignment PIN_L25 -to dis1[4]
+set_location_assignment PIN_J22 -to dis1[5]
+set_location_assignment PIN_H22 -to dis1[6]
+set_location_assignment PIN_M24 -to dis0[0]
+set_location_assignment PIN_Y22 -to dis0[1]
+set_location_assignment PIN_W21 -to dis0[2]
+set_location_assignment PIN_W22 -to dis0[3]
+set_location_assignment PIN_W25 -to dis0[4]
+set_location_assignment PIN_U23 -to dis0[5]
+set_location_assignment PIN_U24 -to dis0[6]
+set_location_assignment PIN_AA25 -to dis2[0]
+set_location_assignment PIN_AA26 -to dis2[1]
+set_location_assignment PIN_Y25 -to dis2[2]
+set_location_assignment PIN_W26 -to dis2[3]
+set_location_assignment PIN_Y26 -to dis2[4]
+set_location_assignment PIN_W27 -to dis2[5]
+set_location_assignment PIN_W28 -to dis2[6]
+set_location_assignment PIN_AD18 -to dis3[0]
+set_location_assignment PIN_AC18 -to dis3[1]
+set_location_assignment PIN_AB18 -to dis3[2]
+set_location_assignment PIN_AH19 -to dis3[3]
+set_location_assignment PIN_AG19 -to dis3[4]
+set_location_assignment PIN_AF18 -to dis3[5]
+set_location_assignment PIN_AH18 -to dis3[6]
+set_location_assignment PIN_AB19 -to dis4[0]
+set_location_assignment PIN_AA19 -to dis4[1]
+set_location_assignment PIN_AG21 -to dis4[2]
+set_location_assignment PIN_AH21 -to dis4[3]
+set_location_assignment PIN_AE19 -to dis4[4]
+set_location_assignment PIN_AF19 -to dis4[5]
+set_location_assignment PIN_AE18 -to dis4[6]
+set_location_assignment PIN_AD17 -to dis5[0]
+set_location_assignment PIN_AE17 -to dis5[1]
+set_location_assignment PIN_AG17 -to dis5[2]
+set_location_assignment PIN_AH17 -to dis5[3]
+set_location_assignment PIN_AF17 -to dis5[4]
+set_location_assignment PIN_AG18 -to dis5[5]
+set_location_assignment PIN_AA14 -to dis5[6]
+set_location_assignment PIN_AA17 -to dis6[0]
+set_location_assignment PIN_AB16 -to dis6[1]
+set_location_assignment PIN_AA16 -to dis6[2]
+set_location_assignment PIN_AB17 -to dis6[3]
+set_location_assignment PIN_AB15 -to dis6[4]
+set_location_assignment PIN_AA15 -to dis6[5]
+set_location_assignment PIN_AC17 -to dis6[6]
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top

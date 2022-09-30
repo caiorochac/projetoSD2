@@ -1,9 +1,9 @@
-module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi);
+module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 	input [6:0] A, B;
 	input b_lig, b_soma, b_sub, b_multi, clk;
 	output reg [13:0] Y;
 	reg [2:0] estado, prox_estado;
-	reg sinal, EN;
+	output reg sinal, EN;
 	parameter desligado = 0, ligado = 1, soma = 2, sub = 3, multi = 4;
 	initial estado = desligado;
 	initial prox_estado = desligado;
@@ -54,14 +54,17 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi);
 			soma: begin
 				Y = A + B;
 				sinal = 1'd0;
+				EN = 1'd1;
 			end
 			sub: begin
 				Y = A - B;
+				EN = 1'd1;
 				if(B > A) sinal = 1'd1;
 				else sinal = 1'd0;
 			end
 			multi: begin
 				Y = A * B;
+				EN = 1'd1;
 				sinal = 1'd0;
 			end
 		endcase

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoSD2
-Fri Sep 30 09:56:46 2022
+Fri Sep 30 16:12:33 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,13 +53,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 30 09:56:46 2022        ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 30 16:12:33 2022        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoSD2                                   ;
 ; Top-level Entity Name              ; main                                         ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 298                                          ;
-;     Total combinational functions  ; 293                                          ;
+; Total logic elements               ; 299                                          ;
+;     Total combinational functions  ; 294                                          ;
 ;     Dedicated logic registers      ; 10                                           ;
 ; Total registers                    ; 10                                           ;
 ; Total pins                         ; 68                                           ;
@@ -75,6 +75,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; main               ; projetoSD2         ;
 ; Family name                                                                ; Cyclone IV E       ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
@@ -150,15 +151,21 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -166,43 +173,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+
-; calculadora.v                    ; yes             ; User Verilog HDL File        ; C:/Users/caior/Desktop/projetoSD2/calculadora.v              ;
-; decode.v                         ; yes             ; User Verilog HDL File        ; C:/Users/caior/Desktop/projetoSD2/decode.v                   ;
-; decodeSinal.v                    ; yes             ; User Verilog HDL File        ; C:/Users/caior/Desktop/projetoSD2/decodeSinal.v              ;
-; main.v                           ; yes             ; User Verilog HDL File        ; C:/Users/caior/Desktop/projetoSD2/main.v                     ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; f:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf ;
-; db/mult_6at.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/caior/Desktop/projetoSD2/db/mult_6at.tdf            ;
+; calculadora.v                    ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/calculadora.v                ;
+; decode.v                         ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/decode.v                     ;
+; decodeSinal.v                    ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/decodeSinal.v                ;
+; main.v                           ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/main.v                       ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf ;
+; db/mult_6at.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Users/crc/Desktop/projetoSD2/db/mult_6at.tdf              ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 298                   ;
-;                                             ;                       ;
-; Total combinational functions               ; 293                   ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 206                   ;
-;     -- 3 input functions                    ; 62                    ;
-;     -- <=2 input functions                  ; 25                    ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 280                   ;
-;     -- arithmetic mode                      ; 13                    ;
-;                                             ;                       ;
-; Total registers                             ; 10                    ;
-;     -- Dedicated logic registers            ; 10                    ;
-;     -- I/O registers                        ; 0                     ;
-;                                             ;                       ;
-; I/O pins                                    ; 68                    ;
-; Embedded Multiplier 9-bit elements          ; 1                     ;
-; Maximum fan-out node                        ; calculadora:comb_3|EN ;
-; Maximum fan-out                             ; 44                    ;
-; Total fan-out                               ; 1211                  ;
-; Average fan-out                             ; 2.75                  ;
-+---------------------------------------------+-----------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                       ;
++---------------------------------------------+-------------------------------------+
+; Resource                                    ; Usage                               ;
++---------------------------------------------+-------------------------------------+
+; Estimated Total logic elements              ; 299                                 ;
+;                                             ;                                     ;
+; Total combinational functions               ; 294                                 ;
+; Logic element usage by number of LUT inputs ;                                     ;
+;     -- 4 input functions                    ; 198                                 ;
+;     -- 3 input functions                    ; 76                                  ;
+;     -- <=2 input functions                  ; 20                                  ;
+;                                             ;                                     ;
+; Logic elements by mode                      ;                                     ;
+;     -- normal mode                          ; 281                                 ;
+;     -- arithmetic mode                      ; 13                                  ;
+;                                             ;                                     ;
+; Total registers                             ; 10                                  ;
+;     -- Dedicated logic registers            ; 10                                  ;
+;     -- I/O registers                        ; 0                                   ;
+;                                             ;                                     ;
+; I/O pins                                    ; 68                                  ;
+; Embedded Multiplier 9-bit elements          ; 1                                   ;
+; Maximum fan-out node                        ; calculadora:comb_3|estado.desligado ;
+; Maximum fan-out                             ; 52                                  ;
+; Total fan-out                               ; 1211                                ;
+; Average fan-out                             ; 2.74                                ;
++---------------------------------------------+-------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,14 +217,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
-; |main                              ; 293 (0)           ; 10 (0)       ; 0           ; 1            ; 1       ; 0         ; 68   ; 0            ; |main                                                           ; work         ;
-;    |calculadora:comb_3|            ; 67 (67)           ; 10 (10)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_3                                        ;              ;
+; |main                              ; 294 (0)           ; 10 (0)       ; 0           ; 1            ; 1       ; 0         ; 68   ; 0            ; |main                                                           ; work         ;
+;    |calculadora:comb_3|            ; 71 (71)           ; 10 (10)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_3                                        ;              ;
 ;       |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_3|lpm_mult:Mult0                         ;              ;
 ;          |mult_6at:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_3|lpm_mult:Mult0|mult_6at:auto_generated ;              ;
-;    |decode:comb_4|                 ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_4                                             ;              ;
-;    |decode:comb_5|                 ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_5                                             ; work         ;
-;    |decode:comb_7|                 ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_7                                             ; work         ;
-;    |decodeSinal:comb_6|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decodeSinal:comb_6                                        ; work         ;
+;    |decode:comb_4|                 ; 74 (74)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_4                                             ;              ;
+;    |decode:comb_5|                 ; 74 (74)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_5                                             ;              ;
+;    |decode:comb_7|                 ; 74 (74)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_7                                             ;              ;
+;    |decodeSinal:comb_6|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decodeSinal:comb_6                                        ;              ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -273,7 +280,6 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+-------------------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal                 ; Free of Timing Hazards ;
 +----------------------------------------------------+-------------------------------------+------------------------+
-; calculadora:comb_3|EN                              ; calculadora:comb_3|WideOr1          ; yes                    ;
 ; calculadora:comb_3|Y[5]                            ; calculadora:comb_3|estado.desligado ; yes                    ;
 ; calculadora:comb_3|Y[1]                            ; calculadora:comb_3|estado.desligado ; yes                    ;
 ; calculadora:comb_3|Y[2]                            ; calculadora:comb_3|estado.desligado ; yes                    ;
@@ -282,7 +288,7 @@ Encoding Type:  One-Hot
 ; calculadora:comb_3|Y[4]                            ; calculadora:comb_3|estado.desligado ; yes                    ;
 ; calculadora:comb_3|Y[0]                            ; calculadora:comb_3|estado.desligado ; yes                    ;
 ; calculadora:comb_3|sinal                           ; calculadora:comb_3|estado.desligado ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                                     ;                        ;
+; Number of user-specified and inferred latches = 8  ;                                     ;                        ;
 +----------------------------------------------------+-------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -320,6 +326,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |main|calculadora:comb_3|Add0      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; No         ; |main|calculadora:comb_3|Add0      ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|calculadora:comb_3|Selector7 ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |main|calculadora:comb_3|Selector2 ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |main|calculadora:comb_3|Selector0 ;
@@ -467,8 +475,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 30 09:56:43 2022
+    Info: Processing started: Fri Sep 30 16:12:30 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoSD2 -c projetoSD2
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (10263): Verilog HDL Event Control warning at calculadora.v(44): event expression contains "|" or "||"
 Info: Found 1 design units, including 1 entities, in source file calculadora.v
     Info: Found entity 1: calculadora
@@ -487,7 +496,6 @@ Critical Warning (10846): Verilog HDL Instantiation warning at main.v(11): insta
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(12): instance has no name
 Info: Elaborating entity "main" for the top level hierarchy
 Info: Elaborating entity "calculadora" for hierarchy "calculadora:comb_3"
-Warning (10240): Verilog HDL Always Construct warning at calculadora.v(44): inferring latch(es) for variable "EN", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at calculadora.v(44): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at calculadora.v(44): inferring latch(es) for variable "sinal", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "sinal" at calculadora.v(44)
@@ -505,7 +513,6 @@ Info (10041): Inferred latch for "Y[10]" at calculadora.v(44)
 Info (10041): Inferred latch for "Y[11]" at calculadora.v(44)
 Info (10041): Inferred latch for "Y[12]" at calculadora.v(44)
 Info (10041): Inferred latch for "Y[13]" at calculadora.v(44)
-Info (10041): Inferred latch for "EN" at calculadora.v(44)
 Info: Elaborating entity "decode" for hierarchy "decode:comb_4"
 Info: Elaborating entity "decodeSinal" for hierarchy "decodeSinal:comb_6"
 Info: Found 6 instances of uninferred RAM logic
@@ -531,8 +538,6 @@ Info: Instantiated megafunction "calculadora:comb_3|lpm_mult:Mult0" with the fol
 Info: Found 1 design units, including 1 entities, in source file db/mult_6at.tdf
     Info: Found entity 1: mult_6at
 Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning: Latch calculadora:comb_3|EN has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal calculadora:comb_3|estado.ligado
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "dis2[5]" is stuck at VCC
     Warning (13410): Pin "dis2[4]" is stuck at VCC
@@ -549,14 +554,14 @@ Info: 4 registers lost all their fanouts during netlist optimizations. The first
 Warning: Ignored assignments for entity "projetoSD2" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity projetoSD2 -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity projetoSD2 -section_id "Root Region" was ignored
-Info: Implemented 367 device resources after synthesis - the final resource count might be different
+Info: Implemented 368 device resources after synthesis - the final resource count might be different
     Info: Implemented 19 input pins
     Info: Implemented 49 output pins
-    Info: Implemented 298 logic cells
+    Info: Implemented 299 logic cells
     Info: Implemented 1 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 227 megabytes
-    Info: Processing ended: Fri Sep 30 09:56:46 2022
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 240 megabytes
+    Info: Processing ended: Fri Sep 30 16:12:33 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
