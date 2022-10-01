@@ -70,21 +70,21 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 					prox_estado <= soma;
 					pressed_soma <= 0;
 				end	
-				if(b_multi && pressed_multi) 
+				if(b_multi && pressed_multi)begin
 					prox_estado <= multi;
 					pressed_multi <= 0;
 				end
 			end
 			multi: begin
-				if(b_lig && pressed_lig) 
+				if(b_lig && pressed_lig)begin
 					prox_estado <= desligado;
 					pressed_lig <= 0;
 				end
-				if(b_soma && pressed_soma) 
+				if(b_soma && pressed_soma)begin 
 					prox_estado <= soma;
 					pressed_soma <= 0;
 				end
-				if(b_sub && pressed_sub) 
+				if(b_sub && pressed_sub)begin 
 					prox_estado <= sub;
 					pressed_sub <= 0;
 				end

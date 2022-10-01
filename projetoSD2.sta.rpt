@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for projetoSD2
-Fri Sep 30 21:52:45 2022
+Sat Oct 01 18:33:07 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -4383,7 +4383,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 30 21:52:41 2022
+    Info: Processing started: Sat Oct 01 18:33:04 2022
 Info: Command: quartus_sta projetoSD2 -c projetoSD2
 Info: qsta_default_script.tcl version: #1
 Warning: Ignored assignments for entity "projetoSD2" -- entity does not exist in design
@@ -4587,8 +4587,8 @@ Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 32 warnings
     Info: Peak virtual memory: 311 megabytes
-    Info: Processing ended: Fri Sep 30 21:52:45 2022
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Sat Oct 01 18:33:07 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

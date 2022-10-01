@@ -92,7 +92,7 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 		endcase
 	end
 	
-	always@(A || B || b_soma || b_sub || b_multi || b_lig) begin
+	always@(A or B or b_soma or b_sub or b_multi or b_lig) begin
 		case(estado)
 			desligado: begin
 				EN = 1'd0;
