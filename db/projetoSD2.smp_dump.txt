@@ -1,5 +1,5 @@
 
-State Machine - |main|calculadora:comb_3|prox_estado
+State Machine - |main|calculadora:comb_4|prox_estado
 Name prox_estado.sub prox_estado.soma prox_estado.ligado prox_estado.desligado prox_estado.multi 
 prox_estado.desligado 0 0 0 0 0 
 prox_estado.ligado 0 0 1 1 0 
@@ -7,7 +7,7 @@ prox_estado.soma 0 1 0 1 0
 prox_estado.sub 1 0 0 1 0 
 prox_estado.multi 0 0 0 1 1 
 
-State Machine - |main|calculadora:comb_3|estado
+State Machine - |main|calculadora:comb_4|estado
 Name estado.sub estado.soma estado.ligado estado.desligado estado.multi 
 estado.desligado 0 0 0 0 0 
 estado.ligado 0 0 1 1 0 

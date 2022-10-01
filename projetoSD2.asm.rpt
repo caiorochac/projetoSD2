@@ -1,5 +1,5 @@
 Assembler report for projetoSD2
-Fri Sep 30 16:39:21 2022
+Fri Sep 30 21:52:46 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Users/crc/Desktop/projetoSD2/projetoSD2.sof
+  5. Assembler Device Options: C:/Users/caior/Desktop/projetoSD2/projetoSD2.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Sep 30 16:39:21 2022 ;
+; Assembler Status      ; Successful - Fri Sep 30 21:52:46 2022 ;
 ; Revision Name         ; projetoSD2                            ;
 ; Top-level Entity Name ; main                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------+
-; Assembler Generated Files                      ;
-+------------------------------------------------+
-; File Name                                      ;
-+------------------------------------------------+
-; D:/Users/crc/Desktop/projetoSD2/projetoSD2.sof ;
-+------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; C:/Users/caior/Desktop/projetoSD2/projetoSD2.sof ;
++--------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: D:/Users/crc/Desktop/projetoSD2/projetoSD2.sof ;
-+----------------+---------------------------------------------------------+
-; Option         ; Setting                                                 ;
-+----------------+---------------------------------------------------------+
-; Device         ; EP4CE115F29C7                                           ;
-; JTAG usercode  ; 0xFFFFFFFF                                              ;
-; Checksum       ; 0x00598F9F                                              ;
-+----------------+---------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/caior/Desktop/projetoSD2/projetoSD2.sof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; Device         ; EP4CE115F29C7                                             ;
+; JTAG usercode  ; 0xFFFFFFFF                                                ;
+; Checksum       ; 0x005A2C8B                                                ;
++----------------+-----------------------------------------------------------+
 
 
 +--------------------+
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 30 16:39:16 2022
+    Info: Processing started: Fri Sep 30 21:52:41 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projetoSD2 -c projetoSD2
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Fri Sep 30 16:39:21 2022
+    Info: Peak virtual memory: 447 megabytes
+    Info: Processing ended: Fri Sep 30 21:52:46 2022
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
