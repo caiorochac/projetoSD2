@@ -103,23 +103,23 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 				sinal = 1'd0;
 			end
 			soma: begin
-				Y = A + B;
+				Y = (A > 7'd99 ? 7'd99 : A) + (B > 7'd99 ? 7'd99 : B);
 				sinal = 1'd0;
 				EN = 1'd1;
 			end
 			sub: begin
 				EN = 1'd1;
-				if(B > A) begin
+				if((B > 7'd99 ? 7'd99 : B) > (A > 7'd99 ? 7'd99 : A)) begin
 					sinal = 1'd1;
-			        Y = B - A;
+			        Y = (B > 7'd99 ? 7'd99 : B) - (A > 7'd99 ? 7'd99 : A);
 			    end
 				else begin
 					sinal = 1'd0;
-					Y = A - B;
+					Y = (A > 7'd99 ? 7'd99 : A) - (B > 7'd99 ? 7'd99 : B);
 				end
 			end
 			multi: begin
-				Y = A * B;
+				Y = (A > 7'd99 ? 7'd99 : A) * (B > 7'd99 ? 7'd99 : B);
 				EN = 1'd1;
 				sinal = 1'd0;
 			end

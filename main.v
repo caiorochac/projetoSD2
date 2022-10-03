@@ -3,7 +3,7 @@ module main(A, B, clk, b0, b1, b2, b3, dis0, dis1, dis2, dis3, dis4, dis5, dis6,
 	input clk, b0, b1, b2, b3;
 	output sinalF;
 	output [0:6] dis0, dis1, dis2, dis3, dis4, dis5, dis6, dis7;
-	wire [6:0] Y;
+	wire [13:0] Y;
 	wire sinal, EN;
 	
 	assign sinalF = sinal;

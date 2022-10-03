@@ -2,20 +2,20 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.901
-TNS   : -30.761
-
 Type  : Slow 1200mV 85C Model Setup 'calculadora:comb_4|estado.desligado'
-Slack : -2.594
-TNS   : -17.244
+Slack : -2.850
+TNS   : -20.764
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.755
+TNS   : -30.539
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.093
-TNS   : -0.098
+Slack : -0.097
+TNS   : -0.097
 
 Type  : Slow 1200mV 85C Model Hold 'calculadora:comb_4|estado.desligado'
-Slack : 0.148
+Slack : 0.278
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -23,23 +23,23 @@ Slack : -3.000
 TNS   : -20.990
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'calculadora:comb_4|estado.desligado'
-Slack : 0.406
+Slack : 0.398
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.578
-TNS   : -27.294
-
 Type  : Slow 1200mV 0C Model Setup 'calculadora:comb_4|estado.desligado'
-Slack : -2.468
-TNS   : -16.232
+Slack : -2.715
+TNS   : -20.310
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.496
+TNS   : -27.203
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.024
-TNS   : -0.024
+Slack : -0.038
+TNS   : -0.038
 
 Type  : Slow 1200mV 0C Model Hold 'calculadora:comb_4|estado.desligado'
-Slack : 0.344
+Slack : 0.419
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -47,31 +47,31 @@ Slack : -3.000
 TNS   : -20.990
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'calculadora:comb_4|estado.desligado'
-Slack : 0.394
+Slack : 0.430
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.942
-TNS   : -8.646
-
 Type  : Fast 1200mV 0C Model Setup 'calculadora:comb_4|estado.desligado'
-Slack : -0.800
-TNS   : -4.912
+Slack : -1.027
+TNS   : -4.086
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.887
+TNS   : -8.931
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.239
-TNS   : -1.249
+Slack : -0.208
+TNS   : -0.663
 
 Type  : Fast 1200mV 0C Model Hold 'calculadora:comb_4|estado.desligado'
-Slack : 0.047
+Slack : 0.134
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -17.823
+TNS   : -17.840
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'calculadora:comb_4|estado.desligado'
-Slack : 0.237
+Slack : 0.273
 TNS   : 0.000
 
 ------------------------------------------------------------

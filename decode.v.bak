@@ -1,11 +1,11 @@
 module decode(display1, display2, X, EN);
 	output reg [0:6] display1, display2;
 	input EN;
-	input [6:0] X;
+	input [13:0] X;
 	parameter zero = 7'b0000001, um = 7'b1001111, dois = 7'b0010010, tres = 7'b0000110, quatro = 7'b1001100, cinco = 7'b0100100;
 	parameter seis = 7'b0100000, sete = 7'b0001111, oito = 7'b0000000, nove = 7'b0000100;
 	
-	always@* begin
+	always@(X || EN) begin
 		if(EN == 0) begin
 			display1 <= 7'b1111111;
 			display2 <= 7'b1111111;

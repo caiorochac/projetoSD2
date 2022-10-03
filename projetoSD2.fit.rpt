@@ -1,5 +1,5 @@
 Fitter report for projetoSD2
-Sat Oct 01 18:33:03 2022
+Mon Oct 03 11:25:23 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -43,6 +43,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  35. Operating Settings and Conditions
  36. Estimated Delay Added for Hold Timing
  37. Fitter Messages
+ 38. Fitter Suppressed Messages
 
 
 
@@ -68,15 +69,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Sat Oct 01 18:33:03 2022        ;
+; Fitter Status                      ; Successful - Mon Oct 03 11:25:23 2022        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoSD2                                   ;
 ; Top-level Entity Name              ; main                                         ;
 ; Family                             ; Cyclone IV E                                 ;
 ; Device                             ; EP4CE115F29C7                                ;
 ; Timing Models                      ; Preliminary                                  ;
-; Total logic elements               ; 392 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 392 / 114,480 ( < 1 % )                      ;
+; Total logic elements               ; 1,143 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 1,143 / 114,480 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 14 / 114,480 ( < 1 % )                       ;
 ; Total registers                    ; 14                                           ;
 ; Total pins                         ; 76 / 529 ( 14 % )                            ;
@@ -148,15 +149,21 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 2.38        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;  17.6%      ;
++----------------------------+-------------+
 
 
 +-------------------------------------------------+
@@ -224,23 +231,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+--------------------------------------+
 
 
-+----------------------------------------------+
-; Incremental Compilation Preservation Summary ;
-+-------------------------+--------------------+
-; Type                    ; Value              ;
-+-------------------------+--------------------+
-; Netlist                 ;                    ;
-;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
-;     -- Achieved         ; 0 / 0 ( 0.00 % )   ;
-;                         ;                    ;
-; Placement               ;                    ;
-;     -- Requested        ; 0 / 573 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 573 ( 0.00 % ) ;
-;                         ;                    ;
-; Routing (by Connection) ;                    ;
-;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
-;     -- Achieved         ; 0 / 0 ( 0.00 % )   ;
-+-------------------------+--------------------+
++-----------------------------------------------+
+; Incremental Compilation Preservation Summary  ;
++-------------------------+---------------------+
+; Type                    ; Value               ;
++-------------------------+---------------------+
+; Netlist                 ;                     ;
+;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
+;     -- Achieved         ; 0 / 0 ( 0.00 % )    ;
+;                         ;                     ;
+; Placement               ;                     ;
+;     -- Requested        ; 0 / 1324 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 1324 ( 0.00 % ) ;
+;                         ;                     ;
+; Routing (by Connection) ;                     ;
+;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
+;     -- Achieved         ; 0 / 0 ( 0.00 % )    ;
++-------------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -257,14 +264,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 573     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 1324    ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/caior/Desktop/projetoSD2/projetoSD2.pin.
+The pin-out file can be found in D:/Users/crc/Desktop/projetoSD2/projetoSD2.pin.
 
 
 +-----------------------------------------------------------------------------------+
@@ -272,26 +279,26 @@ The pin-out file can be found in C:/Users/caior/Desktop/projetoSD2/projetoSD2.pi
 +---------------------------------------------+-------------------------------------+
 ; Resource                                    ; Usage                               ;
 +---------------------------------------------+-------------------------------------+
-; Total logic elements                        ; 392 / 114,480 ( < 1 % )             ;
-;     -- Combinational with no register       ; 378                                 ;
+; Total logic elements                        ; 1,143 / 114,480 ( < 1 % )           ;
+;     -- Combinational with no register       ; 1129                                ;
 ;     -- Register only                        ; 0                                   ;
 ;     -- Combinational with a register        ; 14                                  ;
 ;                                             ;                                     ;
 ; Logic element usage by number of LUT inputs ;                                     ;
-;     -- 4 input functions                    ; 174                                 ;
-;     -- 3 input functions                    ; 135                                 ;
-;     -- <=2 input functions                  ; 83                                  ;
+;     -- 4 input functions                    ; 373                                 ;
+;     -- 3 input functions                    ; 342                                 ;
+;     -- <=2 input functions                  ; 428                                 ;
 ;     -- Register only                        ; 0                                   ;
 ;                                             ;                                     ;
 ; Logic elements by mode                      ;                                     ;
-;     -- normal mode                          ; 337                                 ;
-;     -- arithmetic mode                      ; 55                                  ;
+;     -- normal mode                          ; 892                                 ;
+;     -- arithmetic mode                      ; 251                                 ;
 ;                                             ;                                     ;
 ; Total registers*                            ; 14 / 117,053 ( < 1 % )              ;
 ;     -- Dedicated logic registers            ; 14 / 114,480 ( < 1 % )              ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )                   ;
 ;                                             ;                                     ;
-; Total LABs:  partially or completely used   ; 31 / 7,155 ( < 1 % )                ;
+; Total LABs:  partially or completely used   ; 98 / 7,155 ( 1 % )                  ;
 ; User inserted logic elements                ; 0                                   ;
 ; Virtual pins                                ; 0                                   ;
 ; I/O pins                                    ; 76 / 529 ( 14 % )                   ;
@@ -309,13 +316,13 @@ The pin-out file can be found in C:/Users/caior/Desktop/projetoSD2/projetoSD2.pi
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )                       ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                        ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 3%                        ;
+; Peak interconnect usage (total/H/V)         ; 4% / 4% / 3%                        ;
 ; Maximum fan-out node                        ; calculadora:comb_4|estado.desligado ;
-; Maximum fan-out                             ; 72                                  ;
+; Maximum fan-out                             ; 95                                  ;
 ; Highest non-global fan-out signal           ; calculadora:comb_4|estado.desligado ;
-; Highest non-global fan-out                  ; 71                                  ;
-; Total fan-out                               ; 1427                                ;
-; Average fan-out                             ; 2.49                                ;
+; Highest non-global fan-out                  ; 94                                  ;
+; Total fan-out                               ; 3444                                ;
+; Average fan-out                             ; 2.60                                ;
 +---------------------------------------------+-------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -326,24 +333,24 @@ The pin-out file can be found in C:/Users/caior/Desktop/projetoSD2/projetoSD2.pi
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; A[0] ; AB24  ; 5        ; 115          ; 5            ; 14           ; 19                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[1] ; AB23  ; 5        ; 115          ; 7            ; 14           ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[2] ; AA24  ; 5        ; 115          ; 9            ; 21           ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[3] ; AA23  ; 5        ; 115          ; 10           ; 7            ; 37                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[4] ; AA22  ; 5        ; 115          ; 6            ; 14           ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[5] ; Y24   ; 5        ; 115          ; 13           ; 0            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; A[6] ; Y23   ; 5        ; 115          ; 14           ; 7            ; 29                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[0] ; AB27  ; 5        ; 115          ; 18           ; 7            ; 19                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[1] ; AC26  ; 5        ; 115          ; 11           ; 7            ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[2] ; AD26  ; 5        ; 115          ; 10           ; 0            ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[3] ; AB26  ; 5        ; 115          ; 15           ; 0            ; 37                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[4] ; AC25  ; 5        ; 115          ; 4            ; 21           ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[5] ; AB25  ; 5        ; 115          ; 16           ; 7            ; 23                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; B[6] ; AC24  ; 5        ; 115          ; 4            ; 14           ; 29                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; b0   ; R24   ; 5        ; 115          ; 35           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[0] ; AB24  ; 5        ; 115          ; 5            ; 14           ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[1] ; AB23  ; 5        ; 115          ; 7            ; 14           ; 28                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[2] ; AA24  ; 5        ; 115          ; 9            ; 21           ; 31                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[3] ; AA23  ; 5        ; 115          ; 10           ; 7            ; 35                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[4] ; AA22  ; 5        ; 115          ; 6            ; 14           ; 28                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[5] ; Y24   ; 5        ; 115          ; 13           ; 0            ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; A[6] ; Y23   ; 5        ; 115          ; 14           ; 7            ; 36                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[0] ; AB27  ; 5        ; 115          ; 18           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[1] ; AC26  ; 5        ; 115          ; 11           ; 7            ; 28                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[2] ; AD26  ; 5        ; 115          ; 10           ; 0            ; 31                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[3] ; AB26  ; 5        ; 115          ; 15           ; 0            ; 35                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[4] ; AC25  ; 5        ; 115          ; 4            ; 21           ; 28                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[5] ; AB25  ; 5        ; 115          ; 16           ; 7            ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; B[6] ; AC24  ; 5        ; 115          ; 4            ; 14           ; 36                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; b0   ; R24   ; 5        ; 115          ; 35           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; b1   ; N21   ; 6        ; 115          ; 42           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; b2   ; M21   ; 6        ; 115          ; 53           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; b3   ; M23   ; 6        ; 115          ; 40           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; b2   ; M21   ; 6        ; 115          ; 53           ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; b3   ; M23   ; 6        ; 115          ; 40           ; 7            ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; clk  ; Y2    ; 2        ; 0            ; 36           ; 14           ; 14                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
@@ -1294,29 +1301,37 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                  ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------+
-; |main                                     ; 392 (0)     ; 14 (0)                    ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 76   ; 0            ; 378 (0)      ; 0 (0)             ; 14 (0)           ; |main                                                                                                                ; work         ;
-;    |calculadora:comb_4|                   ; 82 (82)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 14 (14)          ; |main|calculadora:comb_4                                                                                             ;              ;
-;       |lpm_mult:Mult0|                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |main|calculadora:comb_4|lpm_mult:Mult0                                                                              ;              ;
+; |main                                     ; 1143 (0)    ; 14 (0)                    ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 76   ; 0            ; 1129 (0)     ; 0 (0)             ; 14 (0)           ; |main                                                                                                                ; work         ;
+;    |calculadora:comb_4|                   ; 123 (123)   ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 109 (109)    ; 0 (0)             ; 14 (14)          ; |main|calculadora:comb_4                                                                                             ;              ;
+;       |lpm_mult:Mult0|                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |main|calculadora:comb_4|lpm_mult:Mult0                                                                              ; work         ;
 ;          |mult_6at:auto_generated|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 1            ; 1       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |main|calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated                                                      ;              ;
-;    |decode:comb_5|                        ; 70 (70)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 2 (2)            ; |main|decode:comb_5                                                                                                  ;              ;
-;    |decode:comb_6|                        ; 70 (70)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 0 (0)            ; |main|decode:comb_6                                                                                                  ;              ;
-;    |decodeF:comb_7|                       ; 172 (64)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 172 (64)     ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7                                                                                                 ;              ;
-;       |lpm_divide:Div0|                   ; 44 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0                                                                                 ;              ;
-;          |lpm_divide_0jm:auto_generated|  ; 44 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider| ; 44 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_47f:divider|    ; 44 (44)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (44)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
-;       |lpm_divide:Div1|                   ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1                                                                                 ;              ;
-;          |lpm_divide_3jm:auto_generated|  ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_rlh:divider| ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ;              ;
-;                |alt_u_div_a7f:divider|    ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; work         ;
-;       |lpm_divide:Mod0|                   ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0                                                                                 ;              ;
-;          |lpm_divide_3bm:auto_generated|  ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider| ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
-;                |alt_u_div_47f:divider|    ; 47 (47)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
-;       |lpm_divide:Mod1|                   ; 10 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1                                                                                 ;              ;
-;          |lpm_divide_3bm:auto_generated|  ; 10 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_olh:divider| ; 10 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ; work         ;
-;                |alt_u_div_47f:divider|    ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
+;    |decode:comb_5|                        ; 70 (70)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 0 (0)            ; |main|decode:comb_5                                                                                                  ;              ;
+;    |decode:comb_6|                        ; 70 (70)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 69 (69)      ; 0 (0)             ; 1 (1)            ; |main|decode:comb_6                                                                                                  ;              ;
+;    |decodeF:comb_7|                       ; 881 (156)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 881 (156)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7                                                                                                 ;              ;
+;       |lpm_divide:Div0|                   ; 134 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0                                                                                 ;              ;
+;          |lpm_divide_0jm:auto_generated|  ; 134 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider| ; 134 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_47f:divider|    ; 134 (134)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 134 (134)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
+;       |lpm_divide:Div1|                   ; 157 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 157 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1                                                                                 ;              ;
+;          |lpm_divide_3jm:auto_generated|  ; 157 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 157 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_rlh:divider| ; 157 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 157 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ;              ;
+;                |alt_u_div_a7f:divider|    ; 157 (157)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 157 (157)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ;              ;
+;       |lpm_divide:Div2|                   ; 123 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 123 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div2                                                                                 ;              ;
+;          |lpm_divide_dkm:auto_generated|  ; 123 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 123 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_5nh:divider| ; 123 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 123 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;                |alt_u_div_u9f:divider|    ; 123 (123)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 123 (123)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ;              ;
+;       |lpm_divide:Mod0|                   ; 137 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_3bm:auto_generated|  ; 137 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider| ; 137 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_47f:divider|    ; 137 (137)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (137)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
+;       |lpm_divide:Mod1|                   ; 108 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 108 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1                                                                                 ;              ;
+;          |lpm_divide_3bm:auto_generated|  ; 108 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 108 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider| ; 108 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 108 (0)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_47f:divider|    ; 108 (108)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 108 (108)    ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
+;       |lpm_divide:Mod2|                   ; 66 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod2                                                                                 ;              ;
+;          |lpm_divide_3bm:auto_generated|  ; 66 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod2|lpm_divide_3bm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_olh:divider| ; 66 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (0)       ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod2|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider                       ;              ;
+;                |alt_u_div_47f:divider|    ; 66 (66)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 0 (0)             ; 0 (0)            ; |main|decodeF:comb_7|lpm_divide:Mod2|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider ;              ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1383,25 +1398,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dis7[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; dis7[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sinalF  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; B[5]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
-; B[4]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; B[5]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; B[4]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; B[3]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; B[2]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
-; B[6]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; B[6]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; B[1]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
 ; B[0]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
 ; A[5]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; A[4]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
-; A[3]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
+; A[3]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
 ; A[2]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; A[6]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; A[1]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
-; A[0]    ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; A[0]    ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 ; clk     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; b0      ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
 ; b3      ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
-; b2      ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
-; b1      ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; b0      ; Input    ; --            ; (6) 2427 ps   ; --                    ; --  ; --   ;
+; b2      ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
+; b1      ; Input    ; (6) 2427 ps   ; --            ; --                    ; --  ; --   ;
 +---------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1411,63 +1426,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                        ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------------------------+-------------------+---------+
 ; B[5]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~11                                     ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~2                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~4                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~5                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~9                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~11                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~12                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~16                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~17                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram1~21                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~3                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~4                                                ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~10                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~12                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~14                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~17                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~21                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~23                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~30                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~40                                               ; 0                 ; 6       ;
-;      - decode:comb_6|Ram0~45                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~3                                           ; 0                 ; 6       ;
-; B[4]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~9                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|Add2~10                                          ; 1                 ; 6       ;
+;      - calculadora:comb_4|Add1~10                                          ; 1                 ; 6       ;
+;      - calculadora:comb_4|Add0~10                                          ; 1                 ; 6       ;
+;      - calculadora:comb_4|LessThan0~11                                     ; 1                 ; 6       ;
 ;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~1                                                ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~2                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~4                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~5                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~7                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~8                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~14                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~15                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~9                                                ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~11                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~12                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~16                                               ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~17                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~18                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~20                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~5                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~7                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~8                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~9                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~11                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~13                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~15                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~16                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~20                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~22                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~27                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~28                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~33                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~37                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~39                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~41                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~42                                               ; 1                 ; 6       ;
-;      - calculadora:comb_4|Add0~5                                           ; 1                 ; 6       ;
+;      - decode:comb_6|Ram1~21                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~3                                                ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~4                                                ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~10                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~12                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~14                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~17                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~21                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~23                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~30                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~40                                               ; 1                 ; 6       ;
+;      - decode:comb_6|Ram0~45                                               ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~1                                              ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~3                                              ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~5                                              ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~7                                              ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~9                                              ; 1                 ; 6       ;
+; B[4]                                                                       ;                   ;         ;
+;      - decode:comb_6|Ram1~1                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~4                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~5                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~7                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~8                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~14                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~15                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~17                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~18                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~20                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~5                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~7                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~8                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~9                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~11                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~13                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~15                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~16                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~20                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~22                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~27                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~28                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~33                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~37                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~39                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~41                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~42                                               ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~1                                              ; 0                 ; 6       ;
 ; B[3]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~7                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~1                                                ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~3                                                ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~4                                                ; 0                 ; 6       ;
@@ -1502,10 +1520,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_6|Ram0~38                                               ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram0~43                                               ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram0~44                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~7                                           ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~3                                              ; 0                 ; 6       ;
 ; B[2]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~5                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~0                                                ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~1                                                ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram1~3                                                ; 0                 ; 6       ;
@@ -1536,40 +1552,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_6|Ram0~38                                               ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram0~41                                               ; 0                 ; 6       ;
 ;      - decode:comb_6|Ram0~42                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~9                                           ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~5                                              ; 0                 ; 6       ;
 ; B[6]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~12                                     ; 1                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~0                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~4                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~5                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~7                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~8                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~11                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~12                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~16                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~17                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram1~20                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~0                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~1                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~2                                                ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~10                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~14                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~17                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~21                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~25                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~26                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~27                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~28                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~33                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~34                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~37                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~39                                               ; 1                 ; 6       ;
-;      - decode:comb_6|Ram0~46                                               ; 1                 ; 6       ;
-;      - calculadora:comb_4|Add0~1                                           ; 1                 ; 6       ;
+;      - calculadora:comb_4|LessThan0~12                                     ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add2~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add1~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add0~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~0                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~4                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~5                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~7                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~8                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~11                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~12                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~16                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~17                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram1~20                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~0                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~1                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~2                                                ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~10                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~14                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~17                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~21                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~25                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~26                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~27                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~28                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~33                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~34                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~37                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~39                                               ; 0                 ; 6       ;
+;      - decode:comb_6|Ram0~46                                               ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~1                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~3                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~5                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~7                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~9                                              ; 0                 ; 6       ;
 ; B[1]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~3                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~0                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~3                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram1~9                                                ; 1                 ; 6       ;
@@ -1597,10 +1618,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_6|Ram0~38                                               ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~43                                               ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~44                                               ; 1                 ; 6       ;
-;      - calculadora:comb_4|Add0~11                                          ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~7                                              ; 1                 ; 6       ;
 ; B[0]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~1                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~5                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~6                                                ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~18                                               ; 1                 ; 6       ;
@@ -1617,8 +1636,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_6|Ram0~38                                               ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~41                                               ; 1                 ; 6       ;
 ;      - decode:comb_6|Ram0~42                                               ; 1                 ; 6       ;
-;      - calculadora:comb_4|Add0~13                                          ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~9                                              ; 1                 ; 6       ;
 ; A[5]                                                                       ;                   ;         ;
+;      - calculadora:comb_4|Add2~10                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add1~10                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add0~10                                          ; 0                 ; 6       ;
 ;      - calculadora:comb_4|LessThan0~11                                     ; 0                 ; 6       ;
 ;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~2                                                ; 0                 ; 6       ;
@@ -1641,10 +1663,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_5|Ram0~30                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~40                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~45                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~4                                           ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~0                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~2                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~4                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~6                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~8                                              ; 0                 ; 6       ;
 ; A[4]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~9                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~1                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~4                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~5                                                ; 0                 ; 6       ;
@@ -1672,48 +1696,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_5|Ram0~39                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~41                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~42                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~6                                           ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~0                                              ; 0                 ; 6       ;
 ; A[3]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~7                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~1                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~3                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~4                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~5                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~7                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~8                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~11                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~12                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~15                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~18                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~20                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~21                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram1~22                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~0                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~1                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~2                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~7                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~8                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~9                                                ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~11                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~13                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~15                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~16                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~20                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~22                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~27                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~28                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~31                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~32                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~35                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~36                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~38                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~43                                               ; 0                 ; 6       ;
-;      - decode:comb_5|Ram0~44                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~8                                           ; 0                 ; 6       ;
+;      - decode:comb_5|Ram1~1                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~3                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~4                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~5                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~7                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~8                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~11                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~12                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~15                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~18                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~20                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~21                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram1~22                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~0                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~1                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~2                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~7                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~8                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~9                                                ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~11                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~13                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~15                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~16                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~20                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~22                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~27                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~28                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~31                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~32                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~35                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~36                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~38                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~43                                               ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~44                                               ; 1                 ; 6       ;
+;      - calculadora:comb_4|Y~2                                              ; 1                 ; 6       ;
 ; A[2]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~5                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~0                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~1                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~3                                                ; 0                 ; 6       ;
@@ -1744,9 +1764,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_5|Ram0~38                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~41                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~42                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~10                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~4                                              ; 0                 ; 6       ;
 ; A[6]                                                                       ;                   ;         ;
 ;      - calculadora:comb_4|LessThan0~12                                     ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add2~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add1~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Add0~12                                          ; 0                 ; 6       ;
 ;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~0                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~4                                                ; 0                 ; 6       ;
@@ -1774,10 +1797,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_5|Ram0~37                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~39                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~46                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~2                                           ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~0                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~2                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~4                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~6                                              ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~8                                              ; 0                 ; 6       ;
 ; A[1]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~3                                      ; 0                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~0                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~3                                                ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram1~9                                                ; 0                 ; 6       ;
@@ -1805,129 +1830,131 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - decode:comb_5|Ram0~38                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~43                                               ; 0                 ; 6       ;
 ;      - decode:comb_5|Ram0~44                                               ; 0                 ; 6       ;
-;      - calculadora:comb_4|Add0~12                                          ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~6                                              ; 0                 ; 6       ;
 ; A[0]                                                                       ;                   ;         ;
-;      - calculadora:comb_4|LessThan0~1                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~5                                                ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~6                                                ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~18                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~19                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~24                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~25                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~26                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~29                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~31                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~32                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~34                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~35                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~36                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~38                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~41                                               ; 1                 ; 6       ;
-;      - decode:comb_5|Ram0~42                                               ; 1                 ; 6       ;
-;      - calculadora:comb_4|Add0~14                                          ; 1                 ; 6       ;
+;      - decode:comb_5|Ram0~5                                                ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~6                                                ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~18                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~19                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~24                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~25                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~26                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~29                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~31                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~32                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~34                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~35                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~36                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~38                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~41                                               ; 0                 ; 6       ;
+;      - decode:comb_5|Ram0~42                                               ; 0                 ; 6       ;
+;      - calculadora:comb_4|Y~8                                              ; 0                 ; 6       ;
 ; clk                                                                        ;                   ;         ;
-; b0                                                                         ;                   ;         ;
-;      - calculadora:comb_4|Selector1~0                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector1~5                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|pressed_lig~0                                    ; 1                 ; 6       ;
 ; b3                                                                         ;                   ;         ;
+;      - calculadora:comb_4|Selector1~0                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|Selector1~1                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|always0~10                                       ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector1~3                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|Selector4~2                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|Selector4~3                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector4~5                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|Selector4~4                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|Selector4~7                                      ; 1                 ; 6       ;
 ;      - calculadora:comb_4|Selector7~0                                      ; 1                 ; 6       ;
-; b2                                                                         ;                   ;         ;
-;      - calculadora:comb_4|always0~9                                        ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector6~1                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector4~11                                     ; 1                 ; 6       ;
-; b1                                                                         ;                   ;         ;
+;      - calculadora:comb_4|Selector6~0                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|Selector3~7                                      ; 1                 ; 6       ;
+; b0                                                                         ;                   ;         ;
 ;      - calculadora:comb_4|Selector1~2                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector4~6                                      ; 1                 ; 6       ;
-;      - calculadora:comb_4|Selector5~0                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|Selector1~5                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|Selector2~3                                      ; 1                 ; 6       ;
+;      - calculadora:comb_4|pressed_lig~0                                    ; 1                 ; 6       ;
+; b2                                                                         ;                   ;         ;
+;      - calculadora:comb_4|always0~9                                        ; 0                 ; 6       ;
+;      - calculadora:comb_4|Selector6~1                                      ; 0                 ; 6       ;
+;      - calculadora:comb_4|Selector6~2                                      ; 0                 ; 6       ;
+;      - calculadora:comb_4|Selector4~12                                     ; 0                 ; 6       ;
+; b1                                                                         ;                   ;         ;
+;      - calculadora:comb_4|Selector1~3                                      ; 0                 ; 6       ;
+;      - calculadora:comb_4|Selector4~6                                      ; 0                 ; 6       ;
+;      - calculadora:comb_4|Selector5~0                                      ; 0                 ; 6       ;
 +----------------------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                  ;
-+-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; calculadora:comb_4|WideOr0~2        ; LCCOMB_X97_Y46_N16 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; calculadora:comb_4|estado.desligado ; FF_X97_Y46_N5      ; 8       ; Latch enable ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; clk                                 ; PIN_Y2             ; 14      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-+-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                 ;
++-------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; calculadora:comb_4|WideOr0~2        ; LCCOMB_X55_Y48_N0 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; calculadora:comb_4|estado.desligado ; FF_X56_Y48_N13    ; 15      ; Latch enable ; yes    ; Global Clock         ; GCLK16           ; --                        ;
+; clk                                 ; PIN_Y2            ; 14      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
++-------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                ;
-+-------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; calculadora:comb_4|estado.desligado ; FF_X97_Y46_N5 ; 8       ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
-; clk                                 ; PIN_Y2        ; 14      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-+-------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                 ;
++-------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; calculadora:comb_4|estado.desligado ; FF_X56_Y48_N13 ; 15      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
+; clk                                 ; PIN_Y2         ; 14      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
++-------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                                                                     ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Name                                                                                                                                      ; Fan-Out ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; calculadora:comb_4|estado.desligado                                                                                                       ; 71      ;
-; A[3]~input                                                                                                                                ; 37      ;
-; B[3]~input                                                                                                                                ; 37      ;
-; A[2]~input                                                                                                                                ; 33      ;
-; B[2]~input                                                                                                                                ; 33      ;
-; A[1]~input                                                                                                                                ; 30      ;
-; A[4]~input                                                                                                                                ; 30      ;
-; B[1]~input                                                                                                                                ; 30      ;
-; B[4]~input                                                                                                                                ; 30      ;
-; A[6]~input                                                                                                                                ; 29      ;
-; B[6]~input                                                                                                                                ; 29      ;
-; A[5]~input                                                                                                                                ; 23      ;
-; B[5]~input                                                                                                                                ; 23      ;
-; calculadora:comb_4|estado.soma                                                                                                            ; 23      ;
-; A[0]~input                                                                                                                                ; 19      ;
-; B[0]~input                                                                                                                                ; 19      ;
-; calculadora:comb_4|LessThan0~12                                                                                                           ; 15      ;
-; calculadora:comb_4|estado.ligado                                                                                                          ; 14      ;
-; decodeF:comb_7|display1[0]~0                                                                                                              ; 14      ;
-; decodeF:comb_7|display2[0]~2                                                                                                              ; 14      ;
-; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_11_result_int[5]~8 ; 12      ;
-; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_10_result_int[5]~8 ; 12      ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[68]~46            ; 11      ;
-; calculadora:comb_4|Y[0]                                                                                                                   ; 10      ;
-; calculadora:comb_4|Y[3]                                                                                                                   ; 10      ;
-; calculadora:comb_4|estado.multi                                                                                                           ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[67]~48            ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[66]~47            ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[67]~2             ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[66]~1             ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[68]~0             ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_11_result_int[5]~8 ; 10      ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_10_result_int[5]~8 ; 10      ;
-; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_12_result_int[5]~8 ; 10      ;
-; b3~input                                                                                                                                  ; 8       ;
-; calculadora:comb_4|Y[2]                                                                                                                   ; 8       ;
-; calculadora:comb_4|Y[4]                                                                                                                   ; 8       ;
-; calculadora:comb_4|Y[5]                                                                                                                   ; 8       ;
-; calculadora:comb_4|pressed_multi                                                                                                          ; 8       ;
-; calculadora:comb_4|estado.sub                                                                                                             ; 8       ;
-; decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|StageOut[65]~3             ; 8       ;
-; decodeF:comb_7|lpm_divide:Mod0|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_12_result_int[5]~8 ; 8       ;
-; calculadora:comb_4|Y[1]                                                                                                                   ; 6       ;
-; calculadora:comb_4|Y[6]                                                                                                                   ; 6       ;
-; calculadora:comb_4|always0~9                                                                                                              ; 5       ;
-; calculadora:comb_4|WideOr0~2                                                                                                              ; 5       ;
-; calculadora:comb_4|always0~10                                                                                                             ; 4       ;
-; calculadora:comb_4|Selector1~1                                                                                                            ; 4       ;
-; decodeF:comb_7|display3[4]~0                                                                                                              ; 4       ;
-; decodeF:comb_7|lpm_divide:Mod1|lpm_divide_3bm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_13_result_int[5]~8 ; 4       ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                                       ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                                        ; Fan-Out ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; calculadora:comb_4|estado.desligado                                                                                                         ; 94      ;
+; decodeF:comb_7|LessThan0~2                                                                                                                  ; 38      ;
+; A[6]~input                                                                                                                                  ; 36      ;
+; B[6]~input                                                                                                                                  ; 36      ;
+; A[3]~input                                                                                                                                  ; 35      ;
+; B[3]~input                                                                                                                                  ; 35      ;
+; decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_10_result_int[11]~16 ; 32      ;
+; A[2]~input                                                                                                                                  ; 31      ;
+; B[2]~input                                                                                                                                  ; 31      ;
+; A[5]~input                                                                                                                                  ; 30      ;
+; B[5]~input                                                                                                                                  ; 30      ;
+; decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_11_result_int[11]~16 ; 30      ;
+; decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_9_result_int[10]~14  ; 30      ;
+; A[1]~input                                                                                                                                  ; 28      ;
+; A[4]~input                                                                                                                                  ; 28      ;
+; B[1]~input                                                                                                                                  ; 28      ;
+; B[4]~input                                                                                                                                  ; 28      ;
+; decodeF:comb_7|lpm_divide:Div2|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_12_result_int[11]~16 ; 25      ;
+; calculadora:comb_4|estado.sub                                                                                                               ; 23      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_11_result_int[8]~12  ; 22      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_10_result_int[8]~12  ; 22      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_9_result_int[8]~12   ; 22      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_8_result_int[8]~12   ; 22      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_7_result_int[8]~12   ; 22      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_6_result_int[7]~10   ; 20      ;
+; calculadora:comb_4|Y[6]                                                                                                                     ; 18      ;
+; calculadora:comb_4|Y[5]                                                                                                                     ; 18      ;
+; calculadora:comb_4|Y[4]                                                                                                                     ; 18      ;
+; A[0]~input                                                                                                                                  ; 17      ;
+; B[0]~input                                                                                                                                  ; 17      ;
+; calculadora:comb_4|Y[3]                                                                                                                     ; 17      ;
+; calculadora:comb_4|Y[8]                                                                                                                     ; 17      ;
+; calculadora:comb_4|Y[7]                                                                                                                     ; 17      ;
+; calculadora:comb_4|Y[10]                                                                                                                    ; 16      ;
+; calculadora:comb_4|Y[9]                                                                                                                     ; 16      ;
+; calculadora:comb_4|Y[12]                                                                                                                    ; 14      ;
+; calculadora:comb_4|Y[11]                                                                                                                    ; 14      ;
+; decodeF:comb_7|display4[0]~4                                                                                                                ; 14      ;
+; decodeF:comb_7|lpm_divide:Div1|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider|add_sub_12_result_int[8]~12  ; 14      ;
+; decodeF:comb_7|display3[0]~4                                                                                                                ; 13      ;
+; decodeF:comb_7|display1[0]~4                                                                                                                ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_11_result_int[5]~8   ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_10_result_int[5]~8   ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_9_result_int[5]~8    ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_8_result_int[5]~8    ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_7_result_int[5]~8    ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_6_result_int[5]~8    ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_5_result_int[5]~8    ; 13      ;
+; decodeF:comb_7|lpm_divide:Div0|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_4_result_int[5]~8    ; 13      ;
+; calculadora:comb_4|estado.multi                                                                                                             ; 12      ;
++---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -1952,57 +1979,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                                   ; Mode                      ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X93_Y18_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ;                           ; DSPMULT_X93_Y18_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_out2     ; Simple Multiplier (9-bit) ; DSPOUT_X71_Y48_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated|mac_mult1 ;                           ; DSPMULT_X71_Y48_N0 ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
 +------------------------------------------------------------------------+---------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
-+------------------------------------------------------+
-; Interconnect Usage Summary                           ;
-+----------------------------+-------------------------+
-; Interconnect Resource Type ; Usage                   ;
-+----------------------------+-------------------------+
-; Block interconnects        ; 428 / 342,891 ( < 1 % ) ;
-; C16 interconnects          ; 83 / 10,120 ( < 1 % )   ;
-; C4 interconnects           ; 388 / 209,544 ( < 1 % ) ;
-; Direct links               ; 57 / 342,891 ( < 1 % )  ;
-; Global clocks              ; 2 / 20 ( 10 % )         ;
-; Local interconnects        ; 207 / 119,088 ( < 1 % ) ;
-; R24 interconnects          ; 86 / 9,963 ( < 1 % )    ;
-; R4 interconnects           ; 395 / 289,782 ( < 1 % ) ;
-+----------------------------+-------------------------+
++--------------------------------------------------------+
+; Interconnect Usage Summary                             ;
++----------------------------+---------------------------+
+; Interconnect Resource Type ; Usage                     ;
++----------------------------+---------------------------+
+; Block interconnects        ; 1,171 / 342,891 ( < 1 % ) ;
+; C16 interconnects          ; 94 / 10,120 ( < 1 % )     ;
+; C4 interconnects           ; 726 / 209,544 ( < 1 % )   ;
+; Direct links               ; 298 / 342,891 ( < 1 % )   ;
+; Global clocks              ; 2 / 20 ( 10 % )           ;
+; Local interconnects        ; 546 / 119,088 ( < 1 % )   ;
+; R24 interconnects          ; 137 / 9,963 ( 1 % )       ;
+; R4 interconnects           ; 787 / 289,782 ( < 1 % )   ;
++----------------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.65) ; Number of LABs  (Total = 31) ;
+; Number of Logic Elements  (Average = 11.66) ; Number of LABs  (Total = 98) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 2                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
+; 1                                           ; 10                           ;
+; 2                                           ; 4                            ;
+; 3                                           ; 3                            ;
+; 4                                           ; 5                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 4                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 3                            ;
+; 11                                          ; 1                            ;
 ; 12                                          ; 0                            ;
 ; 13                                          ; 1                            ;
-; 14                                          ; 0                            ;
+; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 22                           ;
+; 16                                          ; 60                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.26) ; Number of LABs  (Total = 31) ;
+; LAB-wide Signals  (Average = 0.05) ; Number of LABs  (Total = 98) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 6                            ;
+; 1 Clock                            ; 3                            ;
 ; 1 Clock enable                     ; 2                            ;
 +------------------------------------+------------------------------+
 
@@ -2010,85 +2037,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 12.29) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced  (Average = 11.14) ; Number of LABs  (Total = 98) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 3                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 3                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 13                           ;
+; 1                                            ; 11                           ;
+; 2                                            ; 4                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 5                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 2                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 4                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 3                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 9                            ;
+; 15                                           ; 19                           ;
+; 16                                           ; 26                           ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.19) ; Number of LABs  (Total = 31) ;
+; Number of Signals Sourced Out  (Average = 6.42) ; Number of LABs  (Total = 98) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 3                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 5                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 8                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 2                            ;
+; 1                                               ; 12                           ;
+; 2                                               ; 6                            ;
+; 3                                               ; 4                            ;
+; 4                                               ; 11                           ;
+; 5                                               ; 7                            ;
+; 6                                               ; 9                            ;
+; 7                                               ; 11                           ;
+; 8                                               ; 13                           ;
+; 9                                               ; 4                            ;
+; 10                                              ; 8                            ;
+; 11                                              ; 5                            ;
+; 12                                              ; 3                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.03) ; Number of LABs  (Total = 31) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 3                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 7                            ;
-; 9                                            ; 4                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 9.96) ; Number of LABs  (Total = 98) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 5                            ;
+; 2                                           ; 9                            ;
+; 3                                           ; 6                            ;
+; 4                                           ; 4                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 9                            ;
+; 8                                           ; 5                            ;
+; 9                                           ; 10                           ;
+; 10                                          ; 4                            ;
+; 11                                          ; 7                            ;
+; 12                                          ; 2                            ;
+; 13                                          ; 2                            ;
+; 14                                          ; 4                            ;
+; 15                                          ; 6                            ;
+; 16                                          ; 8                            ;
+; 17                                          ; 5                            ;
+; 18                                          ; 0                            ;
+; 19                                          ; 2                            ;
+; 20                                          ; 2                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 1                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 1                            ;
+; 25                                          ; 0                            ;
+; 26                                          ; 0                            ;
+; 27                                          ; 2                            ;
++---------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -2224,8 +2258,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; A[1]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; A[0]               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; b0                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b3                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; b0                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b2                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b1                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
@@ -2272,9 +2306,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+-------------------------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s)                ; Delay Added in ns ;
 +-----------------+-------------------------------------+-------------------+
-; I/O,clk         ; clk                                 ; 3.86634           ;
-; clk             ; calculadora:comb_4|estado.desligado ; 1.07367           ;
-; clk             ; clk                                 ; 0.815             ;
+; I/O,clk         ; clk                                 ; 4.1508            ;
+; clk             ; calculadora:comb_4|estado.desligado ; 3.301             ;
 +-----------------+-------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
@@ -2286,14 +2319,14 @@ This will disable optimization of problematic paths and expose them for further 
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Oct 01 18:32:49 2022
+    Info: Processing started: Mon Oct 03 11:25:06 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off projetoSD2 -c projetoSD2
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EP4CE115F29C7 for design "projetoSD2"
 Info: Core supply voltage is 1.2V
 Info: Low junction temperature is 0 degrees C
 Info: High junction temperature is 85 degrees C
 Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
-Warning: Feature LogicLock is only available with a valid subscription license. Please purchase a software subscription to gain full access to this feature.
 Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info: Device EP4CE40F29C7 is compatible
     Info: Device EP4CE40F29I7 is compatible
@@ -2313,11 +2346,18 @@ Info: Fitter converted 5 user pins into dedicated programming pins
 Warning: Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "comb_4|Y[2]|combout" is a latch
-    Warning: Node "comb_4|Y[3]|combout" is a latch
-    Warning: Node "comb_4|Y[4]|combout" is a latch
-    Warning: Node "comb_4|Y[5]|combout" is a latch
+    Warning: Node "comb_4|Y[11]|combout" is a latch
+    Warning: Node "comb_4|Y[12]|combout" is a latch
+    Warning: Node "comb_4|Y[13]|combout" is a latch
+    Warning: Node "comb_4|Y[10]|combout" is a latch
+    Warning: Node "comb_4|Y[9]|combout" is a latch
+    Warning: Node "comb_4|Y[8]|combout" is a latch
+    Warning: Node "comb_4|Y[7]|combout" is a latch
     Warning: Node "comb_4|Y[6]|combout" is a latch
+    Warning: Node "comb_4|Y[5]|combout" is a latch
+    Warning: Node "comb_4|Y[4]|combout" is a latch
+    Warning: Node "comb_4|Y[3]|combout" is a latch
+    Warning: Node "comb_4|Y[2]|combout" is a latch
     Warning: Node "comb_4|Y[1]|combout" is a latch
     Warning: Node "comb_4|Y[0]|combout" is a latch
     Warning: Node "comb_7|display2[6]|combout" is a latch
@@ -2334,6 +2374,20 @@ Warning: Timing Analysis is analyzing one or more combinational loops as latches
     Warning: Node "comb_7|display1[2]|combout" is a latch
     Warning: Node "comb_7|display1[1]|combout" is a latch
     Warning: Node "comb_7|display1[0]|combout" is a latch
+    Warning: Node "comb_7|display3[6]|combout" is a latch
+    Warning: Node "comb_7|display3[5]|combout" is a latch
+    Warning: Node "comb_7|display3[4]|combout" is a latch
+    Warning: Node "comb_7|display3[3]|combout" is a latch
+    Warning: Node "comb_7|display3[2]|combout" is a latch
+    Warning: Node "comb_7|display3[1]|combout" is a latch
+    Warning: Node "comb_7|display3[0]|combout" is a latch
+    Warning: Node "comb_7|display4[6]|combout" is a latch
+    Warning: Node "comb_7|display4[5]|combout" is a latch
+    Warning: Node "comb_7|display4[4]|combout" is a latch
+    Warning: Node "comb_7|display4[3]|combout" is a latch
+    Warning: Node "comb_7|display4[2]|combout" is a latch
+    Warning: Node "comb_7|display4[1]|combout" is a latch
+    Warning: Node "comb_7|display4[0]|combout" is a latch
     Warning: Node "comb_4|sinal|combout" is a latch
 Critical Warning: Synopsys Design Constraints File file not found: 'projetoSD2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info: No user constrained base clocks found in the design
@@ -2361,7 +2415,6 @@ Info: Automatically promoted node clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)
 Info: Automatically promoted node calculadora:comb_4|estado.desligado 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node decodeF:comb_7|display3[4]~0
         Info: Destination node decode:comb_6|Ram1~2
         Info: Destination node decode:comb_6|Ram1~6
         Info: Destination node decode:comb_6|Ram1~10
@@ -2371,36 +2424,38 @@ Info: Automatically promoted node calculadora:comb_4|estado.desligado
         Info: Destination node decode:comb_6|Ram1~22
         Info: Destination node decode:comb_6|Ram0~6
         Info: Destination node decode:comb_6|Ram0~18
+        Info: Destination node decode:comb_6|Ram0~24
         Info: Non-global destination nodes limited to 10 nodes
 Info: Starting register packing
-Extra Info: Performing register packing on registers with non-logic cell location assignments
-Extra Info: Completed register packing on registers with non-logic cell location assignments
-Extra Info: Started Fast Input/Output/OE register processing
-Extra Info: Finished Fast Input/Output/OE register processing
-Extra Info: Moving registers into I/O cells, Multiplier Blocks, and RAM blocks to improve timing and density
-Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:03
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Fitter placement operations ending: elapsed time is 00:00:02
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 2% of the available device resources in the region that extends from location X92_Y37 to location X103_Y48
-Info: Fitter routing operations ending: elapsed time is 00:00:00
+    Info: Peak interconnect usage is 3% of the available device resources in the region that extends from location X58_Y37 to location X68_Y48
+Info: Fitter routing operations ending: elapsed time is 00:00:01
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
 Warning: Timing characteristics of device EP4CE115F29C7 are preliminary
 Info: Delay annotation completed successfully
-Info: Quartus II Fitter was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 408 megabytes
-    Info: Processing ended: Sat Oct 01 18:33:04 2022
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Generated suppressed messages file D:/Users/crc/Desktop/projetoSD2/projetoSD2.fit.smsg
+Info: Quartus II Fitter was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 467 megabytes
+    Info: Processing ended: Mon Oct 03 11:25:23 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in D:/Users/crc/Desktop/projetoSD2/projetoSD2.fit.smsg.
 
 

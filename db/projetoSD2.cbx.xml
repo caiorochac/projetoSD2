@@ -3,6 +3,7 @@
 	<PROJECT NAME="projetoSD2">
 		<CBX_INST_ENTRY INSTANCE_NAME="|main|calculadora:comb_4|lpm_mult:Mult0" CBX_FILE_NAME="mult_6at.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|main|decodeF:comb_7|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|decodeF:comb_7|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_dkm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|main|decodeF:comb_7|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_3bm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|main|decodeF:comb_7|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_3jm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|main|decodeF:comb_7|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3bm.tdf"/>
