@@ -14,3 +14,9 @@ estado.ligado 0 0 1 1 0
 estado.soma 0 1 0 1 0 
 estado.sub 1 0 0 1 0 
 estado.multi 0 0 0 1 1 
+
+State Machine - |main|calculadora:comb_4|IR_RECEIVE:comb_3|state
+Name state.IDLE state.DATAREAD state.GUIDANCE 
+state.IDLE 0 0 0 
+state.GUIDANCE 1 0 1 
+state.DATAREAD 1 1 0 

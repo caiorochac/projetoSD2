@@ -2640,100 +2640,6 @@ decode:comb_6
 
 # end
 # entity
-main
-# storage
-db|projetoSD2.(1).cnf
-db|projetoSD2.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-main.v
-721d337eec1982e95757671fca7f7c
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-calculadora
-# storage
-db|projetoSD2.(2).cnf
-db|projetoSD2.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-calculadora.v
-63edfe9ce6b7303d712079d05710cf61
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-desligado
-0
-PARAMETER_SIGNED_DEC
-DEF
-ligado
-1
-PARAMETER_SIGNED_DEC
-DEF
-soma
-2
-PARAMETER_SIGNED_DEC
-DEF
-sub
-3
-PARAMETER_SIGNED_DEC
-DEF
-multi
-4
-PARAMETER_SIGNED_DEC
-DEF
-}
-# hierarchies {
-calculadora:comb_4
-}
-# macro_sequence
-
-# end
-# entity
 lpm_divide
 # storage
 db|projetoSD2.(23).cnf
@@ -3263,6 +3169,186 @@ denom5
 denom3
 -1
 2
+}
+# macro_sequence
+
+# end
+# entity
+main
+# storage
+db|projetoSD2.(1).cnf
+db|projetoSD2.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+d2c7c571c6d9c8b3e9d4d5a77d88bc
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+IR_RECEIVE
+# storage
+db|projetoSD2.(26).cnf
+db|projetoSD2.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ir_receive.v
+4f974cd74587cda88c9e2ad7a6e9e833
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+IDLE
+00
+PARAMETER_UNSIGNED_BIN
+DEF
+GUIDANCE
+01
+PARAMETER_UNSIGNED_BIN
+DEF
+DATAREAD
+10
+PARAMETER_UNSIGNED_BIN
+DEF
+IDLE_HIGH_DUR
+262143
+PARAMETER_SIGNED_DEC
+DEF
+GUIDE_LOW_DUR
+230000
+PARAMETER_SIGNED_DEC
+DEF
+GUIDE_HIGH_DUR
+210000
+PARAMETER_SIGNED_DEC
+DEF
+DATA_HIGH_DUR
+41500
+PARAMETER_SIGNED_DEC
+DEF
+BIT_AVAILABLE_DUR
+20000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+calculadora:comb_4|IR_RECEIVE:comb_3
+}
+# macro_sequence
+
+# end
+# entity
+calculadora
+# storage
+db|projetoSD2.(2).cnf
+db|projetoSD2.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+calculadora.v
+bea9f4d1d9bd8b38989763b262bb4e4
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+desligado
+0
+PARAMETER_SIGNED_DEC
+DEF
+ligado
+1
+PARAMETER_SIGNED_DEC
+DEF
+soma
+2
+PARAMETER_SIGNED_DEC
+DEF
+sub
+3
+PARAMETER_SIGNED_DEC
+DEF
+multi
+4
+PARAMETER_SIGNED_DEC
+DEF
+botaoA
+11110000000011110110101110000110
+PARAMETER_UNSIGNED_BIN
+DEF
+botaoB
+11101100000100110110101110000110
+PARAMETER_UNSIGNED_BIN
+DEF
+botaoC
+11101111000100000110101110000110
+PARAMETER_UNSIGNED_BIN
+DEF
+botaoO
+11101101000100100110101110000110
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+calculadora:comb_4
 }
 # macro_sequence
 

@@ -1,11 +1,14 @@
-module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
+module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN, sensorIR);
 	input [6:0] A, B;
-	input b_lig, b_soma, b_sub, b_multi, clk;
+	input b_lig, b_soma, b_sub, b_multi, clk, sensorIR;
 	output reg [13:0] Y;
 	reg [2:0] estado, prox_estado;
-	reg pressed_soma, pressed_sub, pressed_multi, pressed_lig;
+	wire [31:0] DATA;
+	wire data_ready;
+	reg pressed_soma, pressed_sub, pressed_multi, pressed_lig, bA, bB, bC, bO;
 	output reg sinal, EN;
 	parameter desligado = 0, ligado = 1, soma = 2, sub = 3, multi = 4;
+	parameter botaoA = 32'b11110000000011110110101110000110, botaoB = 32'b11101100000100110110101110000110, botaoC = 32'b11101111000100000110101110000110, botaoO = 32'b11101101000100100110101110000110;
 	initial estado = desligado;
 	initial prox_estado = desligado;
 	initial EN = 0;
@@ -14,6 +17,12 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 	initial pressed_soma = 0;
 	initial pressed_sub = 0;
 	initial pressed_multi = 0;
+	initial bA = 0;
+	initial bB = 0;
+	initial bC = 0;
+	initial bO = 0;
+	
+	IR_RECEIVE(.iCLK(clk), .iRST_n(1), .iIRDA(sensorIR), .oDATA_READY(data_ready), .oDATA(DATA));
 	
 	always@(posedge clk) begin
 		if(estado != prox_estado) estado <= prox_estado;
@@ -24,12 +33,19 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 
 		case(estado)
 			desligado: begin
+				if(data_ready && DATA == botaoO) prox_estado <= ligado;
+				
 				if(b_lig && pressed_lig) begin 
 					prox_estado <= ligado;
 					pressed_lig <= 0;
 				end
 			end
 			ligado: begin
+				if(data_ready && DATA == botaoA) prox_estado <= soma;
+				if(data_ready && DATA == botaoB) prox_estado <= sub;
+				if(data_ready && DATA == botaoC) prox_estado <= multi;
+				if(data_ready && DATA == botaoO) prox_estado <= desligado;
+		
 				if(b_lig && pressed_lig) begin
 					prox_estado <= desligado;
 					pressed_lig <= 0;
@@ -48,6 +64,11 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 				end
 			end
 			soma: begin
+				if(data_ready && DATA == botaoA) prox_estado <= soma;
+				if(data_ready && DATA == botaoB) prox_estado <= sub;
+				if(data_ready && DATA == botaoC) prox_estado <= multi;
+				if(data_ready && DATA == botaoO) prox_estado <= desligado;
+				
 				if(b_lig && pressed_lig) begin
 					prox_estado <= desligado;
 					pressed_lig <= 0;
@@ -62,6 +83,11 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 				end
 			end
 			sub: begin
+				if(data_ready && DATA == botaoA) prox_estado <= soma;
+				if(data_ready && DATA == botaoB) prox_estado <= sub;
+				if(data_ready && DATA == botaoC) prox_estado <= multi;
+				if(data_ready && DATA == botaoO) prox_estado <= desligado;
+				
 				if(b_lig && pressed_lig)begin
 					prox_estado <= desligado;
 					pressed_lig <= 0;
@@ -76,6 +102,11 @@ module calculadora(A, B, Y, clk, b_lig, b_soma, b_sub, b_multi, sinal, EN);
 				end
 			end
 			multi: begin
+				if(data_ready && DATA == botaoA) prox_estado <= soma;
+				if(data_ready && DATA == botaoB) prox_estado <= sub;
+				if(data_ready && DATA == botaoC) prox_estado <= multi;
+				if(data_ready && DATA == botaoO) prox_estado <= desligado;
+				
 				if(b_lig && pressed_lig)begin
 					prox_estado <= desligado;
 					pressed_lig <= 0;

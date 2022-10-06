@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoSD2
-Mon Oct 03 11:25:04 2022
+Thu Oct 06 17:18:28 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -16,23 +16,26 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |main|calculadora:comb_4|prox_estado
  10. State Machine - |main|calculadora:comb_4|estado
- 11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: calculadora:comb_4
- 16. Parameter Settings for User Entity Instance: decode:comb_5
- 17. Parameter Settings for User Entity Instance: decode:comb_6
- 18. Parameter Settings for User Entity Instance: decodeF:comb_7
- 19. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div0
- 20. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod1
- 21. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod0
- 22. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div1
- 23. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod2
- 24. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div2
- 25. Parameter Settings for Inferred Entity Instance: calculadora:comb_4|lpm_mult:Mult0
- 26. lpm_mult Parameter Settings by Entity Instance
- 27. Analysis & Synthesis Messages
+ 11. State Machine - |main|calculadora:comb_4|IR_RECEIVE:comb_3|state
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: calculadora:comb_4
+ 17. Parameter Settings for User Entity Instance: calculadora:comb_4|IR_RECEIVE:comb_3
+ 18. Parameter Settings for User Entity Instance: decode:comb_5
+ 19. Parameter Settings for User Entity Instance: decode:comb_6
+ 20. Parameter Settings for User Entity Instance: decodeF:comb_7
+ 21. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div0
+ 22. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod1
+ 23. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod0
+ 24. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div1
+ 25. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Mod2
+ 26. Parameter Settings for Inferred Entity Instance: decodeF:comb_7|lpm_divide:Div2
+ 27. Parameter Settings for Inferred Entity Instance: calculadora:comb_4|lpm_mult:Mult0
+ 28. lpm_mult Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "calculadora:comb_4|IR_RECEIVE:comb_3"
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -58,16 +61,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 03 11:25:04 2022        ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 06 17:18:28 2022        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoSD2                                   ;
 ; Top-level Entity Name              ; main                                         ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 1,148                                        ;
-;     Total combinational functions  ; 1,143                                        ;
-;     Dedicated logic registers      ; 14                                           ;
-; Total registers                    ; 14                                           ;
-; Total pins                         ; 76                                           ;
+; Total logic elements               ; 1,388                                        ;
+;     Total combinational functions  ; 1,319                                        ;
+;     Dedicated logic registers      ; 177                                          ;
+; Total registers                    ; 177                                          ;
+; Total pins                         ; 77                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 1                                            ;
@@ -156,21 +159,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -182,6 +179,7 @@ applicable agreement for further details.
 ; decode.v                         ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/decode.v                       ;
 ; main.v                           ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/main.v                         ;
 ; decodeF.v                        ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/decodeF.v                      ;
+; IR_RECEIVE.v                     ; yes             ; User Verilog HDL File        ; D:/Users/crc/Desktop/projetoSD2/IR_RECEIVE.v                   ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf ;
 ; db/lpm_divide_0jm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Users/crc/Desktop/projetoSD2/db/lpm_divide_0jm.tdf          ;
 ; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Users/crc/Desktop/projetoSD2/db/sign_div_unsign_olh.tdf     ;
@@ -200,34 +198,34 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                       ;
-+---------------------------------------------+-------------------------------------+
-; Resource                                    ; Usage                               ;
-+---------------------------------------------+-------------------------------------+
-; Estimated Total logic elements              ; 1,148                               ;
-;                                             ;                                     ;
-; Total combinational functions               ; 1143                                ;
-; Logic element usage by number of LUT inputs ;                                     ;
-;     -- 4 input functions                    ; 373                                 ;
-;     -- 3 input functions                    ; 342                                 ;
-;     -- <=2 input functions                  ; 428                                 ;
-;                                             ;                                     ;
-; Logic elements by mode                      ;                                     ;
-;     -- normal mode                          ; 892                                 ;
-;     -- arithmetic mode                      ; 251                                 ;
-;                                             ;                                     ;
-; Total registers                             ; 14                                  ;
-;     -- Dedicated logic registers            ; 14                                  ;
-;     -- I/O registers                        ; 0                                   ;
-;                                             ;                                     ;
-; I/O pins                                    ; 76                                  ;
-; Embedded Multiplier 9-bit elements          ; 1                                   ;
-; Maximum fan-out node                        ; calculadora:comb_4|estado.desligado ;
-; Maximum fan-out                             ; 109                                 ;
-; Total fan-out                               ; 3437                                ;
-; Average fan-out                             ; 2.62                                ;
-+---------------------------------------------+-------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,388     ;
+;                                             ;           ;
+; Total combinational functions               ; 1319      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 471       ;
+;     -- 3 input functions                    ; 352       ;
+;     -- <=2 input functions                  ; 496       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1012      ;
+;     -- arithmetic mode                      ; 307       ;
+;                                             ;           ;
+; Total registers                             ; 177       ;
+;     -- Dedicated logic registers            ; 177       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 77        ;
+; Embedded Multiplier 9-bit elements          ; 1         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 177       ;
+; Total fan-out                               ; 4506      ;
+; Average fan-out                             ; 2.73      ;
++---------------------------------------------+-----------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,9 +233,10 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
-; |main                                     ; 1143 (0)          ; 14 (0)       ; 0           ; 1            ; 1       ; 0         ; 76   ; 0            ; |main                                                                                                                ; work         ;
-;    |calculadora:comb_4|                   ; 122 (122)         ; 14 (14)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4                                                                                             ;              ;
-;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4|lpm_mult:Mult0                                                                              ; work         ;
+; |main                                     ; 1319 (0)          ; 177 (0)      ; 0           ; 1            ; 1       ; 0         ; 77   ; 0            ; |main                                                                                                                ; work         ;
+;    |calculadora:comb_4|                   ; 298 (146)         ; 177 (14)     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4                                                                                             ;              ;
+;       |IR_RECEIVE:comb_3|                 ; 152 (152)         ; 163 (163)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4|IR_RECEIVE:comb_3                                                                           ;              ;
+;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4|lpm_mult:Mult0                                                                              ;              ;
 ;          |mult_6at:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main|calculadora:comb_4|lpm_mult:Mult0|mult_6at:auto_generated                                                      ;              ;
 ;    |decode:comb_5|                        ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_5                                                                                                  ;              ;
 ;    |decode:comb_6|                        ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|decode:comb_6                                                                                                  ;              ;
@@ -316,6 +315,18 @@ Encoding Type:  One-Hot
 +------------------+------------+-------------+---------------+------------------+--------------+
 
 
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |main|calculadora:comb_4|IR_RECEIVE:comb_3|state ;
++----------------+------------+----------------+-------------------+
+; Name           ; state.IDLE ; state.DATAREAD ; state.GUIDANCE    ;
++----------------+------------+----------------+-------------------+
+; state.IDLE     ; 0          ; 0              ; 0                 ;
+; state.GUIDANCE ; 1          ; 0              ; 1                 ;
+; state.DATAREAD ; 1          ; 1              ; 0                 ;
++----------------+------------+----------------+-------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; User-Specified and Inferred Latches                                                                                ;
 +-----------------------------------------------------+-------------------------------------+------------------------+
@@ -351,15 +362,15 @@ Encoding Type:  One-Hot
 ; decodeF:comb_7|display4[0]                          ; GND                                 ; yes                    ;
 ; calculadora:comb_4|sinal                            ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[13]                            ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[11]                            ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[12]                            ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[8]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[9]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[11]                            ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[10]                            ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[4]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[5]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
-; calculadora:comb_4|Y[6]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[9]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[8]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[7]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[6]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[5]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
+; calculadora:comb_4|Y[4]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[2]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[1]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
 ; calculadora:comb_4|Y[3]                             ; calculadora:comb_4|estado.desligado ; yes                    ;
@@ -387,48 +398,69 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 177   ;
+; Number of registers using Synchronous Clear  ; 92    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 101   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display2[2]    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|calculadora:comb_4|Selector24 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display2[3]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display1[0]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display3[0]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display4[3]    ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display2[6]    ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display1[6]    ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display3[6]    ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; No         ; |main|calculadora:comb_4|Selector16 ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |main|decodeF:comb_7|display4[2]    ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |main|calculadora:comb_4|Selector4  ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |main|calculadora:comb_4|Selector1  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display1[2]                     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|calculadora:comb_4|Selector5                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display2[3]                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display1[0]                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display3[3]                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|decodeF:comb_7|display4[0]                     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |main|calculadora:comb_4|IR_RECEIVE:comb_3|Selector2 ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display2[6]                     ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display1[4]                     ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main|decodeF:comb_7|display3[4]                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; No         ; |main|calculadora:comb_4|Selector13                  ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |main|decodeF:comb_7|display4[2]                     ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 55 LEs               ; 5 LEs                  ; No         ; |main|calculadora:comb_4|Selector18                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: calculadora:comb_4 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; desligado      ; 0     ; Signed Integer                         ;
-; ligado         ; 1     ; Signed Integer                         ;
-; soma           ; 2     ; Signed Integer                         ;
-; sub            ; 3     ; Signed Integer                         ;
-; multi          ; 4     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: calculadora:comb_4     ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; desligado      ; 0                                ; Signed Integer  ;
+; ligado         ; 1                                ; Signed Integer  ;
+; soma           ; 2                                ; Signed Integer  ;
+; sub            ; 3                                ; Signed Integer  ;
+; multi          ; 4                                ; Signed Integer  ;
+; botaoA         ; 11110000000011110110101110000110 ; Unsigned Binary ;
+; botaoB         ; 11101100000100110110101110000110 ; Unsigned Binary ;
+; botaoC         ; 11101111000100000110101110000110 ; Unsigned Binary ;
+; botaoO         ; 11101101000100100110101110000110 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: calculadora:comb_4|IR_RECEIVE:comb_3 ;
++-------------------+--------+------------------------------------------------------+
+; Parameter Name    ; Value  ; Type                                                 ;
++-------------------+--------+------------------------------------------------------+
+; IDLE              ; 00     ; Unsigned Binary                                      ;
+; GUIDANCE          ; 01     ; Unsigned Binary                                      ;
+; DATAREAD          ; 10     ; Unsigned Binary                                      ;
+; IDLE_HIGH_DUR     ; 262143 ; Signed Integer                                       ;
+; GUIDE_LOW_DUR     ; 230000 ; Signed Integer                                       ;
+; GUIDE_HIGH_DUR    ; 210000 ; Signed Integer                                       ;
+; DATA_HIGH_DUR     ; 41500  ; Signed Integer                                       ;
+; BIT_AVAILABLE_DUR ; 20000  ; Signed Integer                                       ;
++-------------------+--------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -682,15 +714,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-----------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "calculadora:comb_4|IR_RECEIVE:comb_3"                                                                                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iRST_n     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; iRST_n[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Oct 03 11:24:59 2022
+    Info: Processing started: Thu Oct 06 17:18:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoSD2 -c projetoSD2
-Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file calculadora.v
     Info: Found entity 1: calculadora
 Warning (10263): Verilog HDL Event Control warning at decode.v(8): event expression contains "|" or "||"
@@ -700,30 +741,38 @@ Info: Found 1 design units, including 1 entities, in source file main.v
     Info: Found entity 1: main
 Info: Found 1 design units, including 1 entities, in source file decodef.v
     Info: Found entity 1: decodeF
+Info: Found 1 design units, including 1 entities, in source file ir_receive.v
+    Info: Found entity 1: IR_RECEIVE
+Critical Warning (10846): Verilog HDL Instantiation warning at calculadora.v(25): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(11): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(12): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(13): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(14): instance has no name
 Info: Elaborating entity "main" for the top level hierarchy
 Info: Elaborating entity "calculadora" for hierarchy "calculadora:comb_4"
-Warning (10235): Verilog HDL Always Construct warning at calculadora.v(96): variable "estado" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10240): Verilog HDL Always Construct warning at calculadora.v(95): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at calculadora.v(95): inferring latch(es) for variable "sinal", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "sinal" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[0]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[1]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[2]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[3]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[4]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[5]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[6]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[7]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[8]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[9]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[10]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[11]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[12]" at calculadora.v(95)
-Info (10041): Inferred latch for "Y[13]" at calculadora.v(95)
+Warning (10036): Verilog HDL or VHDL warning at calculadora.v(8): object "bA" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at calculadora.v(8): object "bB" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at calculadora.v(8): object "bC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at calculadora.v(8): object "bO" assigned a value but never read
+Warning (10235): Verilog HDL Always Construct warning at calculadora.v(130): variable "estado" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at calculadora.v(129): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at calculadora.v(129): inferring latch(es) for variable "sinal", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "sinal" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[0]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[1]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[2]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[3]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[4]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[5]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[6]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[7]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[8]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[9]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[10]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[11]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[12]" at calculadora.v(129)
+Info (10041): Inferred latch for "Y[13]" at calculadora.v(129)
+Info: Elaborating entity "IR_RECEIVE" for hierarchy "calculadora:comb_4|IR_RECEIVE:comb_3"
 Info: Elaborating entity "decode" for hierarchy "decode:comb_5"
 Info: Elaborating entity "decodeF" for hierarchy "decodeF:comb_7"
 Warning (10235): Verilog HDL Always Construct warning at decodeF.v(9): variable "EN" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -833,6 +882,7 @@ Info: Instantiated megafunction "calculadora:comb_4|lpm_mult:Mult0" with the fol
     Info: Parameter "MAXIMIZE_SPEED" = "5"
 Info: Found 1 design units, including 1 entities, in source file db/mult_6at.tdf
     Info: Found entity 1: mult_6at
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Timing-Driven Synthesis is running
 Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
     Info: Register "calculadora:comb_4|prox_estado~2" lost all its fanouts during netlist optimizations.
@@ -856,15 +906,15 @@ Info: Found the following redundant logic cells in design
 Warning: Ignored assignments for entity "projetoSD2" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity projetoSD2 -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity projetoSD2 -section_id "Root Region" was ignored
-Info: Implemented 1225 device resources after synthesis - the final resource count might be different
-    Info: Implemented 19 input pins
+Info: Implemented 1467 device resources after synthesis - the final resource count might be different
+    Info: Implemented 20 input pins
     Info: Implemented 57 output pins
-    Info: Implemented 1148 logic cells
+    Info: Implemented 1389 logic cells
     Info: Implemented 1 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 250 megabytes
-    Info: Processing ended: Mon Oct 03 11:25:04 2022
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 248 megabytes
+    Info: Processing ended: Thu Oct 06 17:18:28 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
